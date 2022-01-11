@@ -22,14 +22,11 @@ class Project {
     /**
      * Constructs a new <code>Project</code>.
      * @alias module:model/Project
-     * @param image {String} 
-     * @param title {String} 
-     * @param startdate {String} 
      * @param _abstract {String} 
      */
-    constructor(image, title, startdate, _abstract) { 
+    constructor(_abstract) { 
         
-        Project.initialize(this, image, title, startdate, _abstract);
+        Project.initialize(this, _abstract);
     }
 
     /**
@@ -37,10 +34,7 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, image, title, startdate, _abstract) { 
-        obj['image'] = image;
-        obj['title'] = title;
-        obj['startdate'] = startdate;
+    static initialize(obj, _abstract) { 
         obj['abstract'] = _abstract;
     }
 
@@ -58,15 +52,6 @@ class Project {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('image')) {
-                obj['image'] = ApiClient.convertToType(data['image'], 'String');
-            }
-            if (data.hasOwnProperty('title')) {
-                obj['title'] = ApiClient.convertToType(data['title'], 'String');
-            }
-            if (data.hasOwnProperty('startdate')) {
-                obj['startdate'] = ApiClient.convertToType(data['startdate'], 'String');
-            }
             if (data.hasOwnProperty('abstract')) {
                 obj['abstract'] = ApiClient.convertToType(data['abstract'], 'String');
             }
@@ -81,21 +66,6 @@ class Project {
  * @member {String} _id
  */
 Project.prototype['_id'] = undefined;
-
-/**
- * @member {String} image
- */
-Project.prototype['image'] = undefined;
-
-/**
- * @member {String} title
- */
-Project.prototype['title'] = undefined;
-
-/**
- * @member {String} startdate
- */
-Project.prototype['startdate'] = undefined;
 
 /**
  * @member {String} abstract

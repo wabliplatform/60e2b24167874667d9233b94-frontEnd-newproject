@@ -1,5 +1,5 @@
-let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';document.getElementById('iktlo').onclick = (event) => {
+document.getElementById('iktlo').onclick = (event) => {
     event.preventDefault();
     { location.href= '/home';}};document.getElementById('iqokk').onclick = (event) => {
     event.preventDefault();
-    { location.href= '/createproject';}};window.onload = () => {let projectId = window.location.pathname.replace('/viewproject/','');apiProjectApi.getproject( projectId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); document.querySelector('[annotationname = image]').src = response.body.query.image ;document.querySelector('[annotationname = title]').textContent = response.body.query.title ;document.querySelector('[annotationname = startdate]').textContent = response.body.query.startdate ;document.querySelector('[annotationname = abstract]').textContent = response.body.query.abstract ;}});};
+    { location.href= '/createproject';}};
