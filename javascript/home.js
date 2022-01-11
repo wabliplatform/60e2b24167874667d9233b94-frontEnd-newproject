@@ -1,4 +1,6 @@
-let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("ihkw9").querySelectorAll( "[dataitem='true']" );
+let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';document.getElementById('i7i4u').onclick = (event) => {
+    event.preventDefault();
+    { location.href= '/createproject';}};window.onload = () => {apiProjectApi.getAllproject((error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); const subDataElements = document.getElementById("ihkw9").querySelectorAll( "[dataitem='true']" );
   data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
@@ -27,7 +29,7 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
           subDataElements[i].textContent = data[data.length -i -1].startdate;
         }
        } catch (e) { console.log(e) };
-        subDataElements[i].addEventListener('click',() => {{ location.href= '/Page2/'+data[data.length -i -1]._id+'';}} )
+        subDataElements[i].addEventListener('click',() => {{ location.href= '/viewproject/'+data[data.length -i -1]._id+'';}} )
       }
     });
     
