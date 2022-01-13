@@ -8,5 +8,7 @@ Name | Type | Description | Notes
 **image** | **String** |  | 
 **title** | **String** |  | 
 **startdate** | **String** |  | 
+**_abstract** | **String** |  | 
+**enddate** | **String** |  | 
 
 

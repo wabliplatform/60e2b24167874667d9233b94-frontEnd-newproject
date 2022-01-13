@@ -14,9 +14,7 @@
 
 import ApiClient from './ApiClient';
 import Proj from './model/Proj';
-import Project from './model/Project';
 import ProjApi from './api/ProjApi';
-import ProjectApi from './api/ProjectApi';
 
 
 /**
@@ -64,22 +62,10 @@ export {
     Proj,
 
     /**
-     * The Project model constructor.
-     * @property {module:model/Project}
-     */
-    Project,
-
-    /**
     * The ProjApi service constructor.
     * @property {module:api/ProjApi}
     */
-    ProjApi,
-
-    /**
-    * The ProjectApi service constructor.
-    * @property {module:api/ProjectApi}
-    */
-    ProjectApi
+    ProjApi
 };
 
 export default {
@@ -96,20 +82,8 @@ export default {
     Proj,
 
     /**
-     * The Project model constructor.
-     * @property {module:model/Project}
-     */
-    Project,
-
-    /**
     * The ProjApi service constructor.
     * @property {module:api/ProjApi}
     */
-    ProjApi,
-
-    /**
-    * The ProjectApi service constructor.
-    * @property {module:api/ProjectApi}
-    */
-    ProjectApi
+    ProjApi
 };

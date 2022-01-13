@@ -78,6 +78,18 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property _abstract (base name: "abstract")', function() {
+      // uncomment below and update the code to test the property _abstract
+      //var instance = new TempApi.Proj();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property enddate (base name: "enddate")', function() {
+      // uncomment below and update the code to test the property enddate
+      //var instance = new TempApi.Proj();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));
